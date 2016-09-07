@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 import re
+import gmplot
+import googlemaps
 
 if __name__ == "__main__":
 
@@ -12,20 +14,24 @@ if __name__ == "__main__":
         soup = BeautifulSoup(search_page.text, "lxml")
         title_name = "".join(soup.find("title").contents[0])
         target_div = soup.select("#internList > li")
-        """
-        if title_name == "PyConJP2016":
-            target_div = soup.select(".ptype")
-            for e in target_div:
-                entry_type = e.select(".ptype_name")[0].contents[0]
-                acceptance_num = int(e.select(".amount")[1].contents[1].split("/")[1])
-                reservation_num = int(e.select(".amount_over")[0].contents[0])
-                #print("{0}/{1}".format(reservation_num, acceptance_num))
-                if acceptance_num - reservation_num > 0:
-                    notify_desktop("{0}の席に空きがでました!!".format(entry_type))
-                else:
-                    notify_desktop("まだ満員です...".format(entry_type))
+        
+        # 郵便番号に一致する正規表現...?
+        div_pattern = re.compile(r"勤務先の住所")
+        address_pattern = re.compile(r"([" + "".join(regions) + r"].*?)[<>]")
+        
+        for div in target_div:
+            # タイトルとURLを取得
+            title = div.select(".interntitle")[0].contents[0]
+            link  = div.select(".interntitle")[0].get("href")
 
-        """
+            # URL先に行って住所を取得
+            page = requests.get(link)
+            c_soup = BeautifulSoup(page.text, "lxml")
+            info_divs = str(c_soup.select(".internInfo")[1])
+
+            address_div_start = re.search(div_pattern, info_divs).start()
+            address_part = info_divs[address_div_start:]
+            address = re.search(address_pattern, address_part).group(1)
 
     else:
-        notify_desktop("PyConJP2016のページソースの取得に失敗しました")
+        pass
