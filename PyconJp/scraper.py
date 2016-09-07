@@ -23,5 +23,8 @@ if __name__ == "__main__":
                 #print("{0}/{1}".format(reservation_num, acceptance_num))
                 if acceptance_num - reservation_num > 0:
                     notify_desktop("{0}の席に空きがでました!!".format(entry_type))
+                else:
+                    notify_desktop("まだ満員です...".format(entry_type))
+
     else:
         notify_desktop("PyConJP2016のページソースの取得に失敗しました")
