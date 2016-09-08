@@ -29,9 +29,9 @@ def extract_adrresses(target_url):
         
         # 正規表現
         div_pattern = re.compile(r"勤務先の住所")
-        address_pattern = re.compile(r"((" + r"|".join(regions) + r").*?)[<>]")
-        
-        for div in target_div[:2]:
+        address_pattern = re.compile(r"(((" + r"|".join(regions) + r").*?[0-9０-９-丁目]+).*?)[<>]")
+
+        for div in target_div:
             # タイトルとURLを取得
             title = div.select(".interntitle")[0].contents[0]
             url  = div.select(".interntitle")[0].get("href")
@@ -41,20 +41,23 @@ def extract_adrresses(target_url):
             page = requests.get(url)
             c_soup = BeautifulSoup(page.text, "lxml")
             info_divs = str(c_soup.select(".internInfo")[1])
-
+        
             address_div = re.search(div_pattern, info_divs)
             if not address_div:
                 print("\n-------> [error] failed to search address_div")
-                print("         [msg] This enterprise probably is outside regions")
                 print_error(title, url)
                 continue
+
             address_part = info_divs[address_div.start():]
             address = re.search(address_pattern, address_part)
             if not address:
-                print("-------> [error] failed to search address str")
-                print_error(title, url)
+                #print("\n-------> [Warning] failed to search address str")
+                #print("\n-------> [msg] This enterprise is outside of regions")
+                #print_error(title, url)
                 continue
-            address = address.group(1)
+            address = address.group(2)
+            # print(address)
+            # sys.stdin.read(1)
             enterprise_infos.append({\
                 "title":   title,\
                 "url":     url,\
@@ -82,6 +85,7 @@ if __name__ == "__main__":
     while True:
         print("\t- {}".format(search_page))
         enterprise_infos.extend(extract_adrresses(search_page))
+        #print(enterprise_infos)
 
         search_page = extract_next_search_page(search_page)
         if not search_page:
@@ -91,7 +95,6 @@ if __name__ == "__main__":
 
     # GoogleMap初期化
     print("plotting Google Map...")
-    #sys.exit()
     geocoder = googlemaps.Client(key='AIzaSyAPO0FiAAXTs6me9JdLxhmZ4FL7kgC26ck')
     gmap = gmplot.GoogleMapPlotter(35.681233, 139.766944, 11)
 
