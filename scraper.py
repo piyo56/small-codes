@@ -1,4 +1,5 @@
 import sys
+import time
 from bs4 import BeautifulSoup
 import requests
 import re
@@ -36,6 +37,7 @@ def extract_adrresses(target_url):
             url  = div.select(".interntitle")[0].get("href")
 
             # URL先に行って住所を取得
+            time.sleep(3)
             page = requests.get(url)
             c_soup = BeautifulSoup(page.text, "lxml")
             info_divs = str(c_soup.select(".internInfo")[1])
@@ -59,8 +61,6 @@ if __name__ == "__main__":
     # スクレイピングで現在の検索ページとそれ以降のページの企業情報を全て取得
     while True:
         enterprise_infos.extend(extract_adrresses(search_page))
-        print(enterprise_infos)
-        #sys.stdin.read(1)
 
         search_page = extract_next_search_page(search_page)
         print(search_page)
@@ -68,7 +68,6 @@ if __name__ == "__main__":
         if not search_page:
             break
     
-    sys.exit()
     # GoogleMap初期化
     geocoder = googlemaps.Client(key='AIzaSyAPO0FiAAXTs6me9JdLxhmZ4FL7kgC26ck')
     gmap = gmplot.GoogleMapPlotter(35.681233, 139.766944, 11)
