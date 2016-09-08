@@ -1,3 +1,4 @@
+import sys
 from bs4 import BeautifulSoup
 import requests
 import re
@@ -7,6 +8,15 @@ import googlemaps
 # 地域
 regions = ["東京都", "千葉県"]
 
+def extract_next_search_page(current_page_url):
+    current_page = requests.get(current_page_url)
+    soup = BeautifulSoup(current_page.text, "lxml")
+    next_page_div = soup.select(".next")
+    if next_page_div:
+        return str(next_page_div[0].get("href"))
+    else:
+        return None
+    
 def extract_adrresses(target_url):
     page = requests.get(target_url)
     if page.status_code == 200:
@@ -20,7 +30,7 @@ def extract_adrresses(target_url):
         div_pattern = re.compile(r"勤務先の住所")
         address_pattern = re.compile(r"([" + "".join(regions) + r"].*?)[<>]")
         
-        for div in target_div[:2]:
+        for div in target_div[:1]:
             # タイトルとURLを取得
             title = div.select(".interntitle")[0].contents[0]
             url  = div.select(".interntitle")[0].get("href")
@@ -43,8 +53,22 @@ def extract_adrresses(target_url):
         return []
 
 if __name__ == "__main__":
-    enterprise_infos = extract_adrresses('http://engineer-intern.jp/?s=&internship=&job=&area=&post_type=intern')
+    enterprise_infos = []
+    search_page = 'http://engineer-intern.jp/?s=&internship=&job=&area=&post_type=intern'
 
+    # スクレイピングで現在の検索ページとそれ以降のページの企業情報を全て取得
+    while True:
+        enterprise_infos.extend(extract_adrresses(search_page))
+        print(enterprise_infos)
+        #sys.stdin.read(1)
+
+        search_page = extract_next_search_page(search_page)
+        print(search_page)
+        print()
+        if not search_page:
+            break
+    
+    sys.exit()
     # GoogleMap初期化
     geocoder = googlemaps.Client(key='AIzaSyAPO0FiAAXTs6me9JdLxhmZ4FL7kgC26ck')
     gmap = gmplot.GoogleMapPlotter(35.681233, 139.766944, 11)
