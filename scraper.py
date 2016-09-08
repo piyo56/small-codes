@@ -55,20 +55,23 @@ def extract_adrresses(target_url):
         return []
 
 if __name__ == "__main__":
+    print "start scraping..."
     enterprise_infos = []
     search_page = 'http://engineer-intern.jp/?s=&internship=&job=&area=&post_type=intern'
 
     # スクレイピングで現在の検索ページとそれ以降のページの企業情報を全て取得
     while True:
+        print("\t- {}".format(search_page))
         enterprise_infos.extend(extract_adrresses(search_page))
 
         search_page = extract_next_search_page(search_page)
-        print(search_page)
-        print()
         if not search_page:
             break
     
+    print("\n\t{} entries are found\n".format(len(enterprise_infos))
+
     # GoogleMap初期化
+    print "plotting Google Map..."
     geocoder = googlemaps.Client(key='AIzaSyAPO0FiAAXTs6me9JdLxhmZ4FL7kgC26ck')
     gmap = gmplot.GoogleMapPlotter(35.681233, 139.766944, 11)
 
@@ -79,4 +82,6 @@ if __name__ == "__main__":
         lng = geocode_result[0]["geometry"]["location"]["lng"]
         gmap.marker(lat, lng, 'red', title=enterprise["title"])
 
+    print "writing out as my_map.html..."
     gmap.draw("my_map.html")
+    print "\ndone"
