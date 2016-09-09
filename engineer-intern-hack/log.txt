@@ -1,0 +1,12 @@
+start scraping...
+	- http://engineer-intern.jp/?s=&internship=&job=&area=&post_type=intern
+	- http://engineer-intern.jp/page/2?s&internship&job&area&post_type=intern
+	- http://engineer-intern.jp/page/3?s&internship&job&area&post_type=intern
+	- http://engineer-intern.jp/page/4?s&internship&job&area&post_type=intern
+	- http://engineer-intern.jp/page/5?s&internship&job&area&post_type=intern
+	- http://engineer-intern.jp/page/6?s&internship&job&area&post_type=intern
+	- http://engineer-intern.jp/page/7?s&internship&job&area&post_type=intern
+
+	39 entries are found
+
+plotting Google Map...
