@@ -4,7 +4,7 @@ from pync import Notifier
 
 r = requests.get('http://pyconjp.connpass.com/event/30692/')
 
-flag = False
+fully_occupied = True
 
 # GET response status
 if r.status_code == 200:
@@ -21,10 +21,10 @@ if r.status_code == 200:
         #print("{0}/{1}".format(reservation_num, acceptance_num))
 
         if acceptance_num - reservation_num > 0:
-            flag = True
+            fully_occupied = False
             Notifier.notify("{0}の席に空きがでました!!".format(entry_type), title="PyConJP2016")
 
-    if flag:
+    if fully_occupied:
         Notifier.notify("まだ満員です...", title="PyConJP2016")
 
 else:
