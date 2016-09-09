@@ -79,7 +79,8 @@ def extract_next_search_page(current_page_url):
 if __name__ == "__main__":
     print("start scraping...")
     enterprise_infos = []
-    search_page = 'http://engineer-intern.jp/?s=&internship=&job=&area=&post_type=intern'
+    search_page = "http://engineer-intern.jp/archives/intern/%E9%95%B7%E6%9C%9F%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%83%E3%83%97mapmotion%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE"
+    #search_page = 'http://engineer-intern.jp/?s=&internship=&job=&area=&post_type=intern'
 
     # スクレイピングで現在の検索ページとそれ以降のページの企業情報を全て取得
     while True:
