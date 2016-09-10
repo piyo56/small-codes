@@ -27,8 +27,9 @@ if __name__ == "__main__":
     company_infos = []
     count = 0
     head_url = "https://www.wantedly.com"
-    search_page_url = 'https://www.wantedly.com/search?_=1473480627140&h=internship&l=kanto&o=web_engineer&page=2&t=projects'
-    
+    #search_page_url = 'https://www.wantedly.com/search?_=1473480627140&h=internship&l=kanto&o=web_engineer&page=2&t=projects'
+    search_page_url = 'https://www.wantedly.com/search?q=python&t=projects&o=web_engineer%2Cinfra_engineer&h=internship'
+
     regions = ["東京都", "千葉県", "埼玉県", "茨城県", "神奈川県"]  
     load_more = True
     address_pattern = re.compile(r"(((" + r"|".join(regions) + r").*?[0-9０-９-丁目]+).*?)")
