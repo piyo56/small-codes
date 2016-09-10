@@ -1,0 +1,1130 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Google Maps - pygmaps </title>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true_or_false"></script>
+<script type="text/javascript">
+	function initialize() {
+		var centerlatlng = new google.maps.LatLng(35.681233, 139.766944);
+		var myOptions = {
+			zoom: 11,
+			center: centerlatlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+		var latlng = new google.maps.LatLng(35.670994, 139.723993);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社ラクシーズ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.675314, 139.769570);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社マーケットエンタープライズ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.639800, 139.722136);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Wantedly, Inc.",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.655453, 139.702484);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社CLUE",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.701340, 139.733885);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社メイキップ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.670940, 139.685566);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社ネイキッド",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.689618, 139.782096);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "ユナイテッド・ヘルスコミュニケーション",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.691346, 139.693690);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社ビザスク",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.684678, 139.736255);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社RIT",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(34.695568, 135.501668);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "㈱ブリリアントサービス",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(34.707294, 135.496296);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "クックビズ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(43.063823, 141.357062);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "BULB株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.665303, 139.743752);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社エアークローゼット",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.625566, 139.723361);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プレイド",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.625566, 139.723361);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プレイド",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.675314, 139.769570);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社マーケットエンタープライズ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.646276, 139.703804);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社ピリカ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.675314, 139.769570);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社マーケットエンタープライズ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.675314, 139.769570);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社マーケットエンタープライズ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.726232, 139.723240);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社MMM",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656969, 139.696032);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "CAMPFIRE",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(31.784094, -93.099061);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Sendyou Inc.",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.625566, 139.723361);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プレイド",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.442422, 139.646289);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社アペルザ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.623386, 139.748876);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "(株) ワン・トゥー・テン・デザイン",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.657344, 139.697712);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Actcat, Inc.",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.667224, 139.713833);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社SQUEEZE",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.666938, 139.710630);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "ジョイズ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.654657, 139.723199);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社いい生活",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.654657, 139.723199);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社いい生活",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.654657, 139.723199);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社いい生活",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(34.682772, 135.495330);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "テックビューロ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(33.587013, 130.391269);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社スカイディスク",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.690433, 139.734599);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "MICIN, Inc.",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.634459, 139.713751);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社SORA",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656228, 139.694968);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社インフラトップ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.622983, 139.723275);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "モビルス株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(33.589027, 130.418925);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "LINE Fukuoka株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656007, 139.752230);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社エスキュービズム・ホールディングス",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656007, 139.752230);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社エスキュービズム・ホールディングス",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656007, 139.752230);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社エスキュービズム・ホールディングス",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.660428, 139.729182);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "クルーズ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.648510, 139.704304);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社フェルマー",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.668723, 139.771873);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社アクア",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.660750, 139.727510);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "バイクリメンツ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.660750, 139.727510);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "バイクリメンツ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.657344, 139.697712);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Actcat, Inc.",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.647967, 139.750330);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "アメリエフ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.555394, 139.646725);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社ボンディ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.003082, 135.759144);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "(株) ワン・トゥー・テン・デザイン",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.633113, 139.792375);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Avintonジャパン株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.658389, 139.696632);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "レイルリンク株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(33.837490, 132.761808);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プラチナエッグ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(37.396569, 140.383676);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プラチナエッグ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.623568, 139.719222);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プラチナエッグ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.659306, 139.742311);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "フュージョンシステムズジャパン株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.636842, 139.722975);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "trippiece<トリッピース>",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.642363, 139.713453);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社クラウドワークス",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(34.675019, 135.516357);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プラチナエッグ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.623568, 139.719222);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プラチナエッグ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.708831, 139.760097);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プラチナエッグ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(43.055551, 141.336569);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プラチナエッグ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.657961, 139.696132);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "BASE株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.625566, 139.723361);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プレイド",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.654675, 139.697107);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Yaraku, Inc.",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.658637, 139.738167);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "イタンジ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656228, 139.694968);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社インフラトップ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656228, 139.694968);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社インフラトップ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.657809, 139.709631);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社SnSnap",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.664437, 139.745402);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社ウフル",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.619714, 139.721942);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社Photosynth",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.689618, 139.782096);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "ユナイテッド・ヘルスコミュニケーション",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.662022, 139.706295);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社３ミニッツ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.662022, 139.706295);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社３ミニッツ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.662022, 139.706295);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社３ミニッツ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.669114, 139.750260);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社文響社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656841, 139.698197);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "GMOアドパートナーズ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.658637, 139.738167);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "イタンジ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.642777, 139.709623);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プレイド",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.625566, 139.723361);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プレイド",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.642777, 139.709623);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プレイド",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(34.683567, 135.497641);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "akippa株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.624557, 139.723514);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "セーフィー株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.701081, 139.707457);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "シナプス株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.701081, 139.707457);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "シナプス株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.700841, 139.774102);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "ウィンクル",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656581, 139.705478);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "ピクスタ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.171229, 136.929935);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "クラウド株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.646424, 139.708262);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "TIMERS inc.",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.658637, 139.738167);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "イタンジ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.665473, 139.663351);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "コンクリートファイブジャパン株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.655772, 139.694471);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社Candle",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.655772, 139.694471);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社Candle",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.689618, 139.782096);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "ユナイテッド・ヘルスコミュニケーション",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.689618, 139.782096);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "ユナイテッド・ヘルスコミュニケーション",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.657200, 139.707475);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "gooddaysホールディングス株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.702986, 139.708621);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社マイト",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.702986, 139.708621);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社マイト",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.704213, 139.756536);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "チームラボ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.648612, 139.700451);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "PARTY",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.692520, 139.775641);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社tritrue（トライトゥルー）",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.692520, 139.775641);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社tritrue（トライトゥルー）",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.679147, 139.709008);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Tunnel株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.669114, 139.750260);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社文響社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.692520, 139.775641);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社tritrue（トライトゥルー）",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.692520, 139.775641);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社tritrue（トライトゥルー）",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.700797, 139.815343);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "エネチェンジ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.687707, 139.775908);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社ミナケア",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.657086, 139.701357);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "DATUM STUDIO株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.657086, 139.701357);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "DATUM STUDIO株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656456, 139.699418);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "GMOペパボ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.447507, 139.642345);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Acroquest Technology株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.625566, 139.723361);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プレイド",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.625566, 139.723361);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社プレイド",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.665033, 139.736423);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社Cluex",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.654657, 139.723199);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社いい生活",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.476901, 139.629431);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "Avintonジャパン株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656781, 139.695896);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社スクー",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.660130, 139.707439);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社カンム",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.653769, 139.761262);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "ピラミッドフィルムクアドラ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.657906, 139.704848);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社フランジア・ジャパン",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656531, 139.700971);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "株式会社Labit",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.656822, 139.705112);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "ランサーズ株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+	}
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+	<div id="map_canvas" style="width: 100%; height: 100%;"></div>
+</body>
+</html>
