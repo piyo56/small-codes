@@ -10,7 +10,6 @@ import gmplot
 
 def print_error(msg):
     print("----> [Error] {}".format(msg))
-    sys.exit()
 
 # ページソースを取得してBeautifulSoupのオブジェクトを返す
 def fetch_page_source(url):
@@ -30,12 +29,14 @@ if __name__ == "__main__":
     head_url = "https://www.wantedly.com"
     search_page_url = 'https://www.wantedly.com/search?_=1473480627140&h=internship&l=kanto&o=web_engineer&page=2&t=projects'
     
-    regions = ["東京都", "千葉県", "埼玉県", "茨城県", "神奈川県"]
+    regions = ["東京都", "千葉県", "埼玉県", "茨城県", "神奈川県"]  
     load_more = True
     address_pattern = re.compile(r"(((" + r"|".join(regions) + r").*?[0-9０-９-丁目]+).*?)")
     
+    count = 0
     # 次のページがなくなるまで
     while load_more:
+        # count += 1
         print("\n\t- {}".format(search_page_url))
         search_page_soup = fetch_page_source(search_page_url)
         if search_page_soup is None:
@@ -45,6 +46,7 @@ if __name__ == "__main__":
         target_div = search_page_soup.select(".result-group > a")
         if not len(target_div):
             print_error("search_page is not valid")
+            sys.exit()
 
         # 各企業（プロジェクト）に対し
         for d in target_div:
@@ -77,6 +79,10 @@ if __name__ == "__main__":
         except:
             load_more = False
         
+        # count制限
+        if count > 5:
+            load_more = False
+
     # GoogleMap初期化
     print("plotting Google Map...")
     geocoder = googlemaps.Client(key='AIzaSyAPO0FiAAXTs6me9JdLxhmZ4FL7kgC26ck')
