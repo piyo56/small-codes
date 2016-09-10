@@ -14,6 +14,15 @@
 		};
 		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
+		var latlng = new google.maps.LatLng(40.779374, -81.113402);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "ツクルバ",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
 	}
 </script>
 </head>
