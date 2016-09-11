@@ -41,8 +41,6 @@ if __name__ == "__main__":
         if search_page_soup is None:
             sys.exit()
         
-        company = {"name":"", "title":"", "url":"", "addr":""}
-
         # 検索でヒットした企業
         target_div = search_page_soup.select(".result-group > a")
         if not len(target_div):
@@ -50,6 +48,8 @@ if __name__ == "__main__":
 
         # 各企業（プロジェクト）に対し
         for d in target_div:
+            company = {"name":"", "title":"", "url":"", "addr":""}
+
             company["url"] = head_url + d.get("href")
             project_page_soup = fetch_page_source(company["url"])
             if project_page_soup is None:
@@ -77,3 +77,22 @@ if __name__ == "__main__":
         except:
             load_more = False
         
+    # GoogleMap初期化
+    print("plotting Google Map...")
+    geocoder = googlemaps.Client(key='AIzaSyAPO0FiAAXTs6me9JdLxhmZ4FL7kgC26ck')
+    gmap = gmplot.GoogleMapPlotter(35.681233, 139.766944, 11) #東京駅を中心に
+
+    # GoogleMapで位置を表示
+    for company in company_infos:
+        geocode_result = geocoder.geocode(company["addr"])
+        if not geocode_result or len(geocode_result) == 0:
+            print_error("failed to geocode (url:{})".format(company["url"]))
+            continue
+
+        lat = geocode_result[0]["geometry"]["location"]["lat"]
+        lng = geocode_result[0]["geometry"]["location"]["lng"]
+        gmap.marker(lat, lng, 'red', title=company["name"])
+
+    print("writing out as my_map.html...")
+    gmap.draw("my_map.html")
+    print("\ndone")
