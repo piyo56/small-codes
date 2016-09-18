@@ -1,7 +1,6 @@
 #coding: utf-8
 import sys
 import time
-import json
 from bs4 import BeautifulSoup
 import requests
 import re
