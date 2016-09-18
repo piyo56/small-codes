@@ -5,8 +5,18 @@ import requests
 import json
 import random
 
+# コマンドライン引数から検索ワードを取得（複数の場合はそこからランダムに選ぶ）
+if not (len(sys.argv) > 1):
+    sys.stderr.write("usage: python fetch_image.py [search words]\n")
+    #with open("./error.png", "rb") as f:
+    #    sys.stdout.buffer.write(f.read())
+    sys.exit(1)
+
+search_words = sys.argv[1:]
+rand_num = random.randint(0, len(search_words)-1)
+search_word = search_words[rand_num]
+
 # GIPHYでgifを検索してその中から1つ選んでurlを取得する
-search_word = "Good Job"
 api_key = "dc6zaTOxFJmzC"
 query = search_word.replace(" ", "+")
 
