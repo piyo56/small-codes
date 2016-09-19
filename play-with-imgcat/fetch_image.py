@@ -7,13 +7,13 @@ import random
 
 # コマンドライン引数を解析
 def parse_args():
-    if not (len(sys.argv) > 1):
+    if len(sys.argv) <= 1 or sys.argv[1] in ["-d", "--downsample"]:
         sys.stderr.write("usage: python fetch_image.py [search words]\n\n")
         sys.stderr.write("  -d, --downsample: use downsampled gif image\n\n")
-        # imgcatにリダイレクトする流れなので
-        # エラー用の透明画像を流しておく
-        #with open("./error.png", "rb") as f:
-        #    sys.stdout.buffer.write(f.read())
+        
+        # プロセスツリーをkill
+        import os; import signal;
+        os.killpg( os.getpid(), signal.SIGTERM )
         sys.exit(1)
     
     search_words = []
