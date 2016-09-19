@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 #coding:utf-8
+"""
+GIPHY APIを用いてGIF画像を検索しフェッチして画像データ（バイナリ）を標準出力に流すスクリプト
+"""
 import sys
 import requests
 import json
@@ -7,15 +10,15 @@ import random
 
 # コマンドライン引数を解析
 def parse_args():
-    if len(sys.argv) <= 1 or sys.argv[1] in ["-d", "--downsample"]:
-        sys.stderr.write("usage: python fetch_image.py [search words]\n\n")
+    if len(sys.argv) <= 1 or (len(sys.argv)==2 and sys.argv[1] in ["-d", "--downsample"]):
+        sys.stderr.write("usage: python fetch_image.py [search words] | imgcat (or term-img)\n\n")
         sys.stderr.write("  -d, --downsample: use downsampled gif image\n\n")
-        
+
         # プロセスツリーをkill
         import os; import signal;
         os.killpg( os.getpid(), signal.SIGTERM )
         sys.exit(1)
-    
+
     search_words = []
     do_downsample = False
     for arg in sys.argv[1:]:
