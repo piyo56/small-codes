@@ -9,7 +9,7 @@ import googlemaps
 # 地域
 regions = ["東京都", "千葉県"]
 
-# エラー出力
+# エラーを表示する
 def print_error(title, url, address=""):
     #print("-"*3 + " error " + "-"*40)
     print("\ttitle: {}".format(title))
@@ -19,12 +19,22 @@ def print_error(title, url, address=""):
     print()
     #print("-"*50)
 
+# ページソースを取得してBeautifulSoupのオブジェクトを返す
+def fetch_page_source(url):
+    time.sleep(1)
+    target_page = requests.get(url)
+    if target_page.status_code == 200:
+        soup = BeautifulSoup(target_page.text, "lxml")
+        return soup
+    else:
+        print_error("failed to fetch page source (status code:{})".format(target_page.status_code))
+        return None
+
 # 住所部分を抜き出す関数
 def extract_adrresses(target_url):
-    page = requests.get(target_url)
-    if page.status_code == 200:
+    soup = fetch_page_source(target_url)
+    if soup is not None:
         enterprise_infos = []
-        soup = BeautifulSoup(page.text, "lxml")
         title_name = "".join(soup.find("title").contents[0])
         target_div = soup.select("#internList > li")
 
@@ -38,10 +48,11 @@ def extract_adrresses(target_url):
             title = div.select(".interntitle")[0].contents[0]
             url  = div.select(".interntitle")[0].get("href")
 
+            print("\t\t*{}".format(title))
+
             # URL先に行って住所を取得
-            time.sleep(3)
-            page = requests.get(url)
-            c_soup = BeautifulSoup(page.text, "lxml")
+            time.sleep(1)
+            c_soup = fetch_page_source(url)
             info_divs = str(c_soup.select(".internInfo")[1])
 
             address_div = re.search(div_pattern, info_divs)
@@ -65,23 +76,30 @@ def extract_adrresses(target_url):
                 "url":     url,\
                 "address": address\
             })
-            return enterprise_infos
+        return enterprise_infos
     else:
         return []
 
 def extract_next_search_page(current_page_url):
-    current_page = requests.get(current_page_url)
-    soup = BeautifulSoup(current_page.text, "lxml")
+    soup = fetch_page_source(current_page_url)
     next_page_div = soup.select(".next")
     if next_page_div:
         return str(next_page_div[0].get("href"))
     else:
         return None
 
+def parse():
+    if len(sys.argv) < 2:
+        print("usage: python /path/to/scraper.py [url of EngineerIntern search page]")
+        sys.exit()
+    else:
+        return sys.argv[1]
+
 if __name__ == "__main__":
+    search_page = parse()
+
     print("start scraping...")
     enterprise_infos = []
-    search_page = 'http://engineer-intern.jp/?s=&internship=&job=&area=&post_type=intern'
 
     # スクレイピングで現在の検索ページとそれ以降のページの企業情報を全て取得
     while True:
@@ -89,7 +107,7 @@ if __name__ == "__main__":
         enterprise_infos.extend(extract_adrresses(search_page))
 
         search_page = extract_next_search_page(search_page)
-        if not search_page:
+        if search_page is None:
             break
 
     print("\n\t{} entries are found\n".format(len(enterprise_infos)))

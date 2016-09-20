@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Google Maps - pygmaps </title>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true_or_false"></script>
+<script type="text/javascript">
+	function initialize() {
+		var centerlatlng = new google.maps.LatLng(35.681233, 139.766944);
+		var myOptions = {
+			zoom: 11,
+			center: centerlatlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+		var latlng = new google.maps.LatLng(35.686259, 139.740457);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "[長期インターンシップ]コデアル株式会社",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.647441, 139.714611);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "[短期インターンシップ]株式会社VASILY",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+		var latlng = new google.maps.LatLng(35.651961, 139.753663);
+		var img = new google.maps.MarkerImage('/usr/local/var/pyenv/versions/anaconda3-2.5.0/lib/python3.5/site-packages/gmplot/markers/FF0000.png');
+		var marker = new google.maps.Marker({
+		title: "[長期インターンシップ]株式会社プラスアール",
+		icon: img,
+		position: latlng
+		});
+		marker.setMap(map);
+
+	}
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+	<div id="map_canvas" style="width: 100%; height: 100%;"></div>
+</body>
+</html>
