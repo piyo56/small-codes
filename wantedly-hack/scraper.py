@@ -1,5 +1,6 @@
 #coding: utf-8
 import sys
+import signal
 import time
 from bs4 import BeautifulSoup
 import requests
@@ -21,13 +22,21 @@ def fetch_page_source(url):
         print_error("failed to fetch page source (status code:{})".format(target_page.status_code))
         return None
 
+def parse():
+    if len(sys.argv) < 2:
+        print("usage: python /path/to/scraper.py [url of Wantedly search page]")
+        sys.exit()
+    else:
+        return sys.argv[1]
+
 if __name__ == "__main__":
+    search_page_url = parse()
+
     print("start scraping...")
     company_infos = []
     count = 0
     head_url = "https://www.wantedly.com"
     #search_page_url = 'https://www.wantedly.com/search?_=1473480627140&h=internship&l=kanto&o=web_engineer&page=2&t=projects'
-    search_page_url = 'https://www.wantedly.com/search?q=python&t=projects&o=web_engineer%2Cinfra_engineer&h=internship'
 
     regions = ["東京都", "千葉県", "埼玉県", "茨城県", "神奈川県"]  
     load_more = True
@@ -80,7 +89,7 @@ if __name__ == "__main__":
             load_more = False
         
         # count制限
-        if count > 5:
+        if count > 20:
             load_more = False
 
     # GoogleMap初期化
