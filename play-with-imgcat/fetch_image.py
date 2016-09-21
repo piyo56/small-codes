@@ -8,32 +8,48 @@ import requests
 import json
 import random
 
-# コマンドライン引数を解析
-def parse_args():
-    if len(sys.argv) <= 1 or (len(sys.argv)==2 and sys.argv[1] in ["-d", "--downsample"]):
-        sys.stderr.write("usage: python fetch_image.py [search words] | imgcat (or term-img)\n\n")
-        sys.stderr.write("  -d, --downsample: use downsampled gif image\n\n")
+def kill_process(pid)
+    """
+    プロセスツリーをkillする関数
+    パイプラインとかで繋いでいるときにつかえる
+    """
+    import os; import signal;
+    if pid is None:
+        pid = os.getpid()
+    os.killpg( pid, signal.SIGTERM )
+    sys.exit(1)
 
-        # プロセスツリーをkill
-        import os; import signal;
-        os.killpg( os.getpid(), signal.SIGTERM )
-        sys.exit(1)
+
+def parse_args():
+    """ 
+     コマンドライン引数を解析
+    """
+    usage = "Usage: python {} WORD [-d, --downsample] | imgcat(or term-img)".format(__file__)
+    
+    if len(sys.argv) <= 1:
+        sys.stderr.write(usage)
+        kill_process()
+
+    if len(sys.argv)==2 and sys.argv[1] in ["-d", "--downsample"]:
+        sys.stderr.write(usage)
+        kill_process()
 
     search_words = []
-    do_downsample = False
+    downsamples = False
     for arg in sys.argv[1:]:
         if arg in ["-d", "--downsample"]:
-            do_downsample = True
+            downsamples = True
         else:
             search_words.append(arg)
 
-    return do_downsample, search_words
+    return downsamples, search_words
 
 if __name__=="__main__":
     
     # 引数から検索ワードを取得
+    downsamples, search_words = parse_args()
+
     # 検索ワードが複数の場合はランダムに選択
-    do_downsample, search_words = parse_args()
     rand_num = random.randint(0, len(search_words)-1)
     search_word = search_words[rand_num]
 
@@ -52,7 +68,7 @@ if __name__=="__main__":
     rand_num = random.randint(0, hit_image_nums-1)
 
     # URLからgif画像を取得
-    if do_downsample:
+    if downsamples:
         image_url = results["data"][rand_num]["images"]["fixed_height_downsampled"]["url"]
     else:
         image_url = results["data"][rand_num]["images"]["fixed_height"]["url"]
