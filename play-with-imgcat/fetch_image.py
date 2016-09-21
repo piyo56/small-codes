@@ -7,18 +7,16 @@ import sys
 import requests
 import json
 import random
+import os
+import signal
 
-def kill_process(pid)
+def kill_process(pid=os.getpid()):
     """
     プロセスツリーをkillする関数
     パイプラインとかで繋いでいるときにつかえる
     """
-    import os; import signal;
-    if pid is None:
-        pid = os.getpid()
-    os.killpg( pid, signal.SIGTERM )
+    os.killpg(pid, signal.SIGTERM)
     sys.exit(1)
-
 
 def parse_args():
     """ 
