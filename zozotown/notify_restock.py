@@ -30,5 +30,5 @@ if __name__ == "__main__":
         cart_div = soup.select(".cart")
         
         # 今回のアイテムの場合、カラー3色のサイズ3種で合計9つのdivがヒット
-        if cart_div[0].text.strip() == "完売しました":
+        if not cart_div[0].text.strip() == "完売しました":
             Notifier.notify("再入荷しました！！", title="ZOZO", open=target_url, sound='Ping')
