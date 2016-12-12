@@ -1,0 +1,1 @@
+/Users/naka/Desktop/github/small-codes/bitbar/plugins/bandwidth.1s.sh
