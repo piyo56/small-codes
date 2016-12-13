@@ -1,1 +1,0 @@
-/Users/naka/Desktop/github/small-codes/bitbar/plugins/external-ip.1h.sh

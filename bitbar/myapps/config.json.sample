@@ -1,0 +1,6 @@
+{
+    "email": "<your google developer email>",
+    "key": "<your p12 key>",
+    "home":"<your page url>"
+    "view_id": "<your view id>"
+}
