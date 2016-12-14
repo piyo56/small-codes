@@ -1,1 +1,2 @@
-bitbar/myapps/ga.py
+bitbar/myapps/*.json
+bitbar/myapps/*.p12
