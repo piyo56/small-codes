@@ -24,11 +24,10 @@ def get_service(api_name, api_version, scope, key_file_location, service_account
     return service
 
 if __name__=="__main__":
-    #config_file_path = "config_files/config.json"
-    config_file_path = os.environ["HOME"] +"/Desktop/github/small-codes/bitbar/deploy/config_files/config.json"
-
+    # 設定ファイル読み込み
+    config_file_path = os.path.dirname(__file__) + "/config_files/config.json"
     if not os.path.exists(config_file_path):
-        print("error\n---\nconfig.jsonを同じディレクトリにおいてください")
+        print("---\nconfig.json not found")
         sys.exit()
 
     # APIを利用するのに必要な情報を読み込む
