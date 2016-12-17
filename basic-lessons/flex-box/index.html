@@ -17,11 +17,31 @@ html, body {
   position: absolute;
   top: 25%;
   left: 25%;
+
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-direction: row; /* Safari */
+  flex-direction:         row;
+  -webkit-flex-wrap: wrap; /* Safari */
+  flex-wrap:         wrap;
+  -webkit-justify-content: space-around; /* Safari */
+  justify-content:         space-around;
+  -webkit-align-items: center; 
+  align-items: center; 
+}
+.box {
+  width:  100px;
+  height: 100px;
+  background: skyblue;
+   border-radius: 5px;
+  //margin: 10px 10px;
 }
   </style>
 </head>
   <div class="flex-container">
-
+    <div id="1" class="box"></div>
+    <div id="2" class="box"></div>
+    <div id="3" class="box"></div>
   </div>
 <body>
   
