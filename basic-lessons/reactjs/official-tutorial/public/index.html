@@ -55,6 +55,9 @@ let CommentBox = React.createClass({
     this.loadCommentsFromServer();
     setInterval(this.loadCommentsFromServer(), this.props.pollInterval);
   },
+  handleCommentSubmit: function(comment) {
+      // TODO: サーバに送信、リストをリフレッシュ
+  },
   render: function() {
     return (
       <div className="commentBox">
@@ -85,11 +88,29 @@ let CommentList = React.createClass({
 });
 
 let CommentForm = React.createClass({
+  handleSubmit: function(e) {
+    e.preventDefault();
+    let authorDOM = ReactDOM.findDOMNode(this.refs.author);
+    let textDOM   = ReactDOM.findDOMNode(this.refs.text);
+    let author = authorDOM.value.trim();
+    let text   = textDOM.value.trim();
+    if (!text || !author){
+      return;
+    }
+    
+    //TODO: サーバにリクエストを送信
+    this.props.onCommentSubmit({author: author, text: text});
+    authorDOM.value = '';
+    textDOM.value   = '';
+    return;
+  },
   render: function() {
     return (
-      <div className="commentForm">
-        Hello, world! I am a CommentForm.
-      </div>
+      <form className="commentForm" onSubmit={this.handleSubmit}>
+        <input type="text" placeholder="Your name" ref="author" />
+        <input type="text" placeholder="Say something..." ref="text" />
+        <input type="submit" value="Post" />
+      </form>
     );
   }
 });
