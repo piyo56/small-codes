@@ -6,7 +6,7 @@
     },
     {
         "id": 1420070400000,
-        "author": "Paul O’Shannessy",
+        "author": "Paul O\u2019Shannessy",
         "text": "React is *great*!"
     },
     {
@@ -23,5 +23,15 @@
         "id": 1464988717637,
         "author": "evil",
         "text": "<a href=\"javascript:alert(1)\">alert(1)</a>"
+    },
+    {
+        "id": 1485190815192,
+        "author": "Me",
+        "text": "hello reactjs!!!"
+    },
+    {
+        "id": 1485190827651,
+        "author": "Me",
+        "text": "WowWowWowWowwww"
     }
 ]
