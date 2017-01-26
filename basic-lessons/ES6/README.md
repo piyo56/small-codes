@@ -1,6 +1,6 @@
 ## ES6 （ES2015）
 
-<img src="https://cdn-images-1.medium.com/max/800/1*raWO3dhM4jMjf9VY-kZzNg.png" alt="modern_js_pic">
+<img src="https://cdn-images-1.medium.com/max/800/1*raWO3dhM4jMjf9VY-kZzNg.png" alt="modern_js_pic" height="400">
 
 ### 概要
 
@@ -10,12 +10,13 @@
 - 一応毎年策定されている（ES2016, ES2017...）
 - ES6から飛躍的に機能が増えた（class / generator / module などが含まれる最新仕様）
 
-
 ### 機能
 
 - let constによる変数宣言
 
 - クラス構文
+
+  普段jsであまり複雑なことをやらないので今回初めてes5でのクラス構文を見たがよく意味がわからない。es6でやっとサポートされたとあってまぁ普通に書けるようになったという感じ。
 
 - アロー関数による関数宣言
 
@@ -30,6 +31,10 @@
 
 - 配列展開
 	引数展開のようなもの
+  ```
+  var array = [1, 2, 3];
+  console.log(...array);
+  ```
 	
 - 関数のデフォルト引数
 	```
@@ -45,6 +50,10 @@
 	console.log(hello)
 	```
 
+- Promise
+
+  コールバック地獄さようなら
+
 
 ### 取り巻く技術(JSの闇っぽいところ)
 
@@ -59,7 +68,7 @@
 #### モジュールシステム
 
 - Browserify、Webpackなど
-- ES6ではモジュールシステム(import/export)があるが、そのままだと大量のファリうこれを事前に開発環境側で静的解析しガッチャンコして配布する仕組み
+- ES6ではモジュールシステム(import/export)があるが、必要なファイルを事前に開発環境側で静的解析しガッチャンコして配布する仕組み
 
 
 ### 参考
@@ -68,3 +77,6 @@
 - [春からはじめるモダンJavaScript / ES2015](http://qiita.com/mizchi/items/3bbb3f466a3b5011b509)
 
 - [Modern JavaScript概観、そしてElectronへ](http://blog.satotaichi.info/modern-javascript_201701/) 
+
+- [ES6時代のJavaScript](http://techlife.cookpad.com/entry/2015/02/02/094607) 
+
